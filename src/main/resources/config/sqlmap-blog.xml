@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="blogboardDAO">
+
+	<select id="getboard" parameterType="hashmap" resultType="blog">
+		${sql}
+	</select>
+
+	<select id="page" parameterType="hashmap" resultType="blog">
+	<![CDATA[
+		select * from 
+		(select rownum as st, AllList.* from 
+		(select * from ${userid} order by bnum desc) 
+		AllList where rownum <= ${start} + 4 and exist = 0) 
+		where st >= ${start}
+	]]>
+	</select>
+	<select id="readAll" resultType="blog" parameterType="hashmap">
+		${sql}
+	</select>
+	<insert id="boardInsert" parameterType="hashmap">
+		${sql}
+	</insert>
+	<select id="readOne" parameterType="hashmap" resultType="blog">
+		${sql}
+	</select>
+	<update id="boardUpdate" parameterType="hashmap">
+		${sql}
+	</update>
+	<select id="maxBnum" parameterType="hashmap" resultType="int">
+		${sql}
+	</select>
+	<select id="maxNum" parameterType="hashmap" resultType="int">
+		${sql}
+	</select>
+	<update id="boardDelete" parameterType="hashmap">
+		${sql}
+	</update>
+	<select id="countBlogBoard" parameterType="hashmap" resultType="int">
+		${sql}
+	</select>
+	<select id="selectBlogBoard" parameterType="hashmap" resultType="blog">
+		${sql}
+	</select>
+</mapper>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Maper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="QNADAO">
+	<insert id="create" parameterType="qna" >
+		insert into qna (qwriter, qtitle, qcontent, qdate)
+		values ( #{qwriter}, #{qtitle}, #{qcontent}, #{qdate})
+	</insert>
+	
+	<update id="replyinsert" parameterType="qna">
+		update qna set qreply=#{qreply}, replydeleted = 0 where qnum=#{qnum}
+	</update>
+	
+	<update id="replyupdate" parameterType="qna">
+		update qna set qtitle=#{qtitle}, qreply=#{qreply} where qnum=#{qnum}
+	</update>
+	
+	<update id="replydelete" parameterType="int">
+		update qna set replydeleted = 1 where qnum = #{qnum}
+	</update>
+	
+	<select id="readAll" resultType="qna" parameterType="qna">
+		select * from qna where deleted = 0 order by qnum desc
+	</select>
+	
+	<select id="readOne" resultType="qna" parameterType="int">
+		select * from qna where qnum = #{qnum}
+	</select>
+	
+	<update id="update" parameterType="qna">
+		update qna set qtitle = #{qtitle}, qcontent = #{qcontent}
+		where qnum = #{qnum }
+	</update>
+	
+	<update id="delete" parameterType="int">
+		update qna set replydeleted = 1 
+		where qnum = #{qnum }
+	</update>
+	
+	<select id="countQNA" resultType="int">
+	select count(*) from qna
+	</select>
+
+	<select id="selectQNA" resultType="qna">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT * 
+							FROM qna 
+							where deleted=0
+							ORDER BY QNUM DESC 
+							) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end} 
+	</select>
+	
+	<select id="maxQnum" resultType="int">
+		select max(qnum) from qna
+	</select>
+	
+</mapper>

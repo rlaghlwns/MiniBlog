@@ -1,0 +1,23 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lobster|Nanum+Gothic|Nanum+Myeongjo|Nanum+Pen+Script|Open+Sans+Condensed:300|Roboto&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Lobster', cursive; */
+
+#style-div {
+    width: 15rem; 
+    height: 97vh;
+    float: right; 
+    position: absolute;
+    right: 0;
+    opacity: 0.3;
+
+    background-color: white;
+}
+
+#style-div:hover {
+    opacity: 1;
+}

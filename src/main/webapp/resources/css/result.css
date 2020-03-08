@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.table {
+	width: 500px;
+	height: 600px;
+	border: 2px solid black;
+}
+
+.line1 {
+	width: 100%;
+	border-bottom : 1px solid;
+	border-bottom: 1px solid;
+	height: 30px;
+}
+
+.line2 {
+	border-bottom: 1px solid;
+}
+
+.line1 {
+	border: 1px thick;
+}
+
+.line1 .bnum{
+	float: left;
+}
+.line2 div{
+	display: inline-block;
+}
+.line2 .writer{
+	float: right;
+}
+

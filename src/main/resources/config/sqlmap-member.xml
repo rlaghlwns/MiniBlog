@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memberDAO">
+
+	<select id="login" parameterType="hashmap" resultType="member">
+		${sql}
+	</select>
+
+	<select id="create" parameterType="hashmap">
+		${create}
+	</select>
+	<select id="create2" parameterType="hashmap">
+		${create2}
+	</select>
+	<select id="create3" parameterType="hashmap">
+		${create3}
+	</select>
+	<select id="create4" parameterType="hashmap">
+		${create4}
+	</select>
+	<select id="seq1" parameterType="hashmap">
+		${seq1}
+	</select>
+	<select id="seq2" parameterType="hashmap">
+		${seq2}
+	</select>
+	<select id="seq3" parameterType="hashmap">
+		${seq3}
+	</select>
+	<insert id="join" parameterType="hashmap">
+		${sql}
+	</insert>
+
+	<select id="checkid" parameterType="hashmap" resultType="member">
+		${sql}
+	</select>
+	<select id="checknick" parameterType="hashmap" resultType="int">
+		${sql}
+	</select>
+	<update id="changeinfo" parameterType="hashmap">
+		${sql}
+	</update>
+	<update id="changeblogname" parameterType="hashmap">
+		${sql}
+	</update>
+	<select id="findID" parameterType="hashmap" resultType="member">
+		${sql}
+	</select>
+	<select id="findPW" parameterType="hashmap" resultType="member">
+		${sql}
+	</select>
+	<select id="getidnumC" parameterType="hashmap" resultType="int">
+		${sql}
+	</select>
+	<update id="changepw" parameterType="hashmap">
+		${sql}
+	</update>
+	<select id="checknick2" parameterType="hashmap"
+		resultType="String">
+		${sql}
+	</select>
+	<update id="delmember" parameterType="hashmap">
+		${sql}
+	</update>
+	<!-- 프로필 파일 수정 -->
+	<update id="updateImage" parameterType="member">
+		update blogmember set
+		profile=#{profile,jdbcType=VARCHAR} where userid=#{userid}
+	</update>
+	<update id="design" parameterType="hashmap">
+		${sql}
+	</update>
+	<select id="getstyle" parameterType="hashmap"
+		resultType="member">
+		${sql}
+	</select>
+	<select id="selectByNick" parameterType="String"
+		resultType="member">
+		select * from blogmember where nickname = #{nickname }
+	</select>
+	<select id="getlist" parameterType="hashmap" resultType="member">
+		${sql}
+	</select>
+	<select id="getuserid" parameterType="hashmap"
+		resultType="String">
+		${sql}
+	</select>
+	<update parameterType="hashmap" id="droptable">${sql} </update>
+
+	<update parameterType="hashmap" id="dropsequence">${sql} </update>
+</mapper>

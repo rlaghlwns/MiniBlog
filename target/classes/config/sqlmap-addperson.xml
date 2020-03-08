@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="addPersonDAO">
+	<select id="myid" resultType="member" parameterType="hashmap">
+		${myid}
+	</select>
+	
+	<select id="find" resultType="int" parameterType="hashmap">
+		${find}
+	</select>
+	
+	<select id="check" resultType="int" parameterType="hashmap">
+      ${check}
+   </select>
+	
+	<select id="joinfriend" resultType="addfriend" parameterType="hashmap">
+		${joinfriend}
+	</select>
+	
+	<select id="myfriend" resultType="addfriend" parameterType="hashmap">
+		${myfriend}
+	</select>
+	
+	<insert id="adddb" parameterType="hashmap">
+		${adddb}
+	</insert>
+	
+	<update id="sure" parameterType="hashmap">
+		${sure}
+	</update>
+	
+	<delete id="del" parameterType="hashmap">
+		${del}
+	</delete>
+</mapper>

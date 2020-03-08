@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="boardDAO">
+
+	<select id="init" parameterType="hashmap" resultType="board">
+		${sql}
+	</select>
+
+	<select id="readAll" resultType="board">
+		select * from blogmember where
+		existnum = 0 and nickname!='admin' order by fnum desc
+	</select>
+
+	<select id="countBoard" resultType="int">
+		select count(*) from
+		blogmember where userid!='admin' and style!='0'
+	</select>
+
+	<select id="selectBoard" resultType="board">
+		SELECT * FROM (SELECT ROWNUM RN, A.*FROM (SELECT *FROM blogmember where userid!='admin' and style!='0' ORDER BY fnum DESC) A ) WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<select id="getboard" parameterType="hashmap"
+		resultType="member">
+		${sql}
+	</select>
+</mapper>

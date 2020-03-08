@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+#title {
+	margin-top: 10vh;
+	width: 100%;
+	height: 150px;
+	z-index: 2;
+	display: block;
+}
+
+#div {
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	margin-top: 35vh;
+}
+
+#div fieldset {
+	z-index: 2;
+	width: 400px;
+	height: 400px;
+	display: inline-block;
+	margin: auto;
+	border-radius: 50px;
+	border: none;
+	text-align: center;
+}
+
+#title2 {
+	width: 300px;
+	height: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+#title2 h1 {
+	font-family: 'Amaranth', sans-serif;
+	font-size: 60px;
+	color: #ff860d;
+	display: inline-block;
+	border: 0.5px solid #ff860d;
+}
+
+#title2 #h1 {
+	background-color: #ff860d;
+	color: white;
+}
+
+#title2 #h2 {
+	background-color: white;
+	color: #ff860d;
+}
+
+#mainlogin a {
+	text-decoration: none
+}
+
+#pagebutton {
+	margin-left: 370px;
+}
+
+.a {
+	color: gray;
+}
+
+.a:hover {
+	font-size: 18px;
+	color: #ff860d;
+}
+
+.loginbtn {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.loginform {
+	align-items: center;
+}
+
+.login {
+	width: 150px;
+	height: 65px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: white;
+	background-color: #4d4d4d;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+}
+
+.login:hover {
+	background-color: #ff860d;
+	box-shadow: 0px 15px 20px rgba(255, 102, 0, 0.4);
+	color: #fff;
+	transform: translateY(-7px);
+}
+
+.idpw-input {
+	padding: 8px;
+	display: block;
+	border: none;
+	border-bottom: 1px solid gray;
+	width: 120px;
+	margin: auto;
+	height: 30px;
+	border-radius: 30px;
+}
+
+.idpw-animate-input {
+	transition: width 0.4s ease-in-out
+}
+
+.idpw-animate-input:focus {
+	width: 100% !important
+}
+
+.checkbox {
+	width: 120px;
+	margin: auto;
+}
+
+#mainlogin input[type="checkbox"] {
+	display: none;
+	color: gray;
+}
+
+#mainlogin input[type=checkbox]:checked+.label::after {
+	display: block;
+	color: gray;
+}
+
+.label:hover {
+	/* 	color: red; */
+	font-size: 17px;
+}
+
+.label {
+	color: gray;
+}
+
+.label::before {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ff860d;
+	content: ' ';
+	border-radius: 10px;
+	float: left;
+	margin: 0 px;
+	cursor: pointer;
+}
+
+.label::after {
+	display: none;
+	bottom: 14.6px;
+	right: 49px;
+	content : '';
+	color: #00ff40;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background-color: #ff860d;
+	border-radius: 5px;
+	cursor: pointer;
+	content: '';
+}
+
+#mainlogin p {
+	display: inline-block;
+	color: gray;
+}

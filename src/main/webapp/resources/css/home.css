@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.div {
+	width: 100%;
+	height: 1000px;
+}
+
+.boardlist {
+	display: inline-block;
+	float: left;
+	border: 2px solid black;
+	width: 200px;
+	height: 800px;
+}
+
+.board .boardin {
+	display: inline-block;
+	float: left;
+	width: 800px;
+	height: 400px;
+	border: 2px solid black;
+	margin-left: 50px;
+	position: absolute;
+}
+
+.news {
+	display: inline-block;
+	width: 800px;
+	height: 400px;
+	border: 2px solid black;
+	margin-left: 50px;
+	margin-top: 450px;
+}
+
+table {
+	margin-left: 70px;
+}
+
+.pageing {
+	margin-left: 70px;
+}
+
+table th {
+	width: 200px;
+}
+
+table td {
+	text-align: center;
+	border-bottom: 1px solid black;
+}
+
+fieldset {
+	width: 300px;
+	height: 300px; display : inline-block;
+	float: left;
+	margin-left: 900px;
+	position: absolute;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none
+}
+
+#pagebutton {
+	margin-left: 370px;
+}
+
+.a:hover {
+	font-size: 18px;
+	color: red;
+}
+
+.loginbtn {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.loginform {
+	align-items: center;
+}
+
+.login {
+	width: 100px;
+	height: 45px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: #000;
+	background-color: #fff;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+}
+
+.login:hover {
+	background-color: #2EE59D;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: #fff;
+	transform: translateY(-7px);
+}
+.idpw-input{
+	padding:8px;
+	display:block;
+	border:none;
+	border-bottom:1px solid #2EE59D;
+	width:120px;
+	}
+.idpw-animate-input{
+	transition:width 0.4s ease-in-out
+	}
+.idpw-animate-input:focus{
+	width:100%!important
+	}
+	

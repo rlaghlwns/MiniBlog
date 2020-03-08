@@ -1,0 +1,50 @@
+@charset "UTF-8";
+#main {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#main * {
+    margin: inherit;
+    padding: inherit;
+    box-sizing: inherit;
+    border: 1px solid black;
+    text-align: left;
+}
+
+#main header {
+    height: 7rem;
+}
+
+#main nav {
+    height: 3rem;
+}
+
+#main section {
+    display: flex;
+    flex-grow: 1;
+}
+
+#main section #div1 {
+    flex-basis: 10rem;
+}
+
+#main section #div2 {
+    flex-grow: 1;
+}
+
+#main section #div3 {
+    flex-basis: 10rem;
+}
+
+#main footer {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+}
